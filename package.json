@@ -1,0 +1,19 @@
+{
+  "name": "youtube app",
+  "version": "1.0.0",
+  "description": "simple project just for example of implementing node , express together",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Sruthi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4",
+    "http": "0.0.0",
+    "jquery": "^3.2.1",
+    "morgan": "^1.8.2",
+    "youtube-node": "^1.3.2"
+  }
+}
