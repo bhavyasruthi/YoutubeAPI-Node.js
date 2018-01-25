@@ -3,8 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var YouTube = require('youtube-node');
 var youTube = new YouTube();
-//var $ = require('jquery');
-youTube.setKey('AIzaSyCVnV8xa8Ip3WpQKP6il3znRf99SYZdayM');
+youTube.setKey('');// Add your Youtube API key
 var app = express();
 var counter=0;
 app.use(morgan('combined'));
@@ -19,16 +18,13 @@ app.get('/counter', function (req, res) {
   else {
     console.log(result);
     var str=JSON.stringify(result, null, 2);
-    console.log("----"+str);
-    //document.body.s.innerHTML = '<pre>' + str + '</pre>';
-    //$('#s').html('<pre>' + str + '</pre>');
+    console.log("result :"+str);
     res.send(str);
   }
 });
  counter++;
-  //res.send(""+counter);
 });
 var port = 3000;
 app.listen(port, function () {
-  console.log(`IMAD course app listening on port ${port}!`);
+  console.log(`Server started and app listening on port ${port}!`);
 });
